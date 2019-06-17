@@ -3,65 +3,110 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>  
-      .header {
-          background-color: #c49c69;
-          width: 80%;
+
+      .row1 {
+          width: 100%;
+          height: 100px;
           float: left;
       }
 
+      .header {
+          background-color: #c49c69;
+          width: 80%;
+          height: 100%;
+          float: left;
+      }
+      
       .logo {
           background-color: #1e689e;
           width: 20%;
+          height: 100%;
+          float: left;
+      }
+
+      .row2 {
+          width: 100%;
+          height: 500px;
+          float: left;  
+      }
+
+      .leftcolumn {
+          width: 20%;
+          height: 100%;
+          float: left;
+      }
+
+      .rightcolmn {
+          width: 80%;
+          height: 100%;
           float: left;
       }
 
       .nav {
           background-color: #f08080;
-          width: 20%;
+          width: 100%;
+          height: 60%;
+          float: left; 
+      }
+
+      .side {
+          background-color: #1e689e;
+          width: 100%;
+          height: 40%;
           float: left;
       }
 
       .main {
           background-color: #36a7d6;
           width: 80%;
+          height: 100%;
           float: left;
       }
 
-      .side {
-          background-color: #1e689e;
-
-      }
+      
 
       .footer {
           background-color: #c49c69;
           width: 100%;
           float: left;
+          height: 50px;
       }
   </style>
 </head>
 <body>
-    <div class="header">
-        This is the header.
+
+    <div class="row1">
+        <div class="header">
+            This is my header.
+        </div>
+
+        <div class="logo">
+            logo
+        </div>
     </div>
 
-    <div class="logo">
-        logo
-    </div>
+    <div class="row2">
+        <div class="leftcolumn">
+            <div class="nav">
+                nav
+            </div>
 
-    <div class="nav">
-        nav
-    </div>
+            <div class="side">
+                side
+            </div>
+        </div>
 
-    <div class="main">
-        Main
-    </div>
-
-    <div class="side">
-        side
+        <div class="rightcolumn">
+            <div class="main">
+                main
+            </div>
+        </div>
     </div>
 
     <div class="footer">
         footer
     </div>
+
+    
 </body>
 </html>
