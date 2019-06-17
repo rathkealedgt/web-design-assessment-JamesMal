@@ -2,11 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>  
-
-      body {
-          padding: 10px;
-      }
+  <style>
           
       .row1 {
           width: 100%;
@@ -31,19 +27,18 @@
 
       .row2 {
           width: 100%;
-          height: 500px;
           float: left;  
       }
 
       .leftcolumn {
           width: 20%;
-          height: 100%;
+          height: 50%;
           float: left;
       }
 
-      .rightcolmn {
+      .rightcolumn {
           width: 80%;
-          height: 100%;
+          height: 50%;
           float: left;
       }
 
@@ -79,7 +74,7 @@
 
       .main {
           background-color: #36a7d6;
-          width: 80%;
+          width: 100%;
           height: 100%;
           float: left;
       }
@@ -93,6 +88,13 @@
           height: 50px;
           text-align: center;
       }
+
+      @media screen and (max-width: 800px) {
+          .leftcolumn, .rightcolumn {
+              width: 100%;
+          }
+      }
+
   </style>
 </head>
 <body>
