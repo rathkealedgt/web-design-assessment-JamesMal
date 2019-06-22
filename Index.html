@@ -51,6 +51,7 @@
       .row2 {
           width: 100%;
           float: left;
+          height:auto;
           /*row2 always starts just bellow row1*/
           position: absolute;
           top: 100px;
@@ -61,13 +62,13 @@
       .leftcolumn {
           /*leftcolumn and rightcolumn fill the width of row2*/
           width: 20%;
-          height: 100%;
+          height: auto;
           float: left;
       }
 
       .rightcolumn {
           width: 80%;
-          height: 100%;
+          height: auto;
           float: left;
       }
 
@@ -83,33 +84,84 @@
           border: 5px solid white;
       }
 
-      .nav a {
+      /*.nav a {
           float: left;
-          /*Each link is easy to use on a touch screen*/
+          /*Each link is easy to use on a touch screen
           display: block;
           color: #f2f2f2;
           text-align: center;
-          /*The link is easy to read*/
+          /*The link is easy to read
           padding: 14px 0px;
           text-decoration: none;
           width: 100%;
       }
-
-      .nav a:hover {
-          /*The link is easy to see when the mouse hovers over it*/
+          */
+      .menu:hover {
+        
           background-color: #ddd;
           color: black;
-      }
+      } 
+
+
+                  .menu {                                                      
+                      list-style-type: none;
+                      margin: 0;
+                      padding: 0;
+                      width: 100%;
+                      background-color: #f08080;
+                      float: left;
+                      height: 50px;
+                      text-align: center;
+                      vertical-align: middle;
+                      line-height: 50px;
+                      color: black;
+                  }
+
+                  .menu a {
+                      display: block;
+                      color: #000;
+                      padding: 8px 16px;
+                      text-decoration: none;
+                  }
+
+                  .active {
+                      background-color: #ffffff;
+                      color: black;
+                  }
+
+                                                                                                                                                 
 
       .side {
           background-color: #1e689e;
           width: 100%;
           float: left;
           /*If I knew what to use this for, I could set the height*/
-          height: 100px;
+          height: auto;
           padding: 10px;
           box-sizing: border-box;
           border: 5px solid white;
+
+      }
+
+      .button {
+          background-color: #4CAF50; /* Green */
+          border: none;
+          color: white;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+         vertical-align:middle;
+         line-height:30px;
+          cursor: pointer;
+          width: 50%;
+          float: left;
+          height:30px;
+      }
+
+      .disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
       }
 
       .main {
@@ -144,9 +196,12 @@
 
       /*When the screen is less than 800px wide, row2 changes its layout*/
       /*This is responsive design. It needs more work*/
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 1020px) {
           .leftcolumn, .rightcolumn {
               width: 100%;
+          }
+          .menu {
+              width: 25%;
           }
       }
 
@@ -170,16 +225,46 @@
 
     <div class="row2">  <!--This was very trickey as there are multiple nested DIVs-->
         <div class="leftcolumn">  <!--This has two DIVs stacked vertically-->
-            <div class="nav">  <!--This is where all links are held-->
-                <a href="Privacy.html">Privacy</a>
-                <a href="Security.html">Security</a>
-                <a href="Contact.html">Contact</a>
+            <div class="nav">
+                <!--This is where all links are held-->
+                <!--<a href="tips.html">Tips and tricks</a>-->
+
+                <a href="index.html">
+                    <div class="menu active">
+                        Home
+                    </div>
+                </a>
+
+                <a href="tips.html">
+                    <div class="menu">
+                        Tips and Tricks
+                    </div>
+                </a>
+
+                <a href="legal.html">
+                    <div class="menu">
+                        Legal
+                    </div>
+                </a>
+
+                <a href="Contact.html">
+                    <div class="menu">
+                        Contact
+                    </div>
+                </a>
+
             </div>
 
-            <div class="side">
-                side
-            </div>
-        </div>
+                        <div class="side">
+                            <div class="button">
+                                English
+                            </div>
+
+                            <div class="button disabled">
+                                Maori
+                            </div>
+                        </div>
+                    </div>
 
         <div class="rightcolumn">  <!--This Column contains the Main text of the page-->
             <div class="main">  <!--I have used unorderd list items-->
@@ -194,6 +279,10 @@
                         Carpentry, joinery, and cabinetmaking are specialized woodworking crafts,
                         providing a range of products from wooden structures and furniture to wooden toys.
                     </li>
+
+                    <li>
+                        
+                    </li>
                 </ul>
 
                 <h2>Historical Background</h2>
@@ -205,7 +294,7 @@
                         first skills. From the wood clubs and spears at the start of civilization,
                         the use of wood was extended to dugout canoes, farm plows, and simple three-legged
                         stools, to the ornate cabinetry and intricate structures of modern times.
-                    </li>
+                    </li><!--This li has been hidden because the content is big-->
                     <li>
                         The reduction of forest reserves since the Middle Ages, however, made
                         timber increasingly expensive. This has brought about greater reliance by
@@ -215,7 +304,8 @@
                         seasoning periods, and they can be waterproofed, fireproofed, and impregnated with
                         protective chemicals. Plywood is particularly valuable to carpenters because it allows
                         them to cover broad areas of framing in a short time.
-                    </li>
+                    </li><!--This li has also been hidden because of the size-->
+                    <li>Except for plywood, composite wood products, unfortunately, are not as strong as natural timber. These products cannot be bent or steamed into different shapes, as can plywood, so furniture built from them often appears boxy. Screws and nails cannot fasten them together securely unless plastic or metal inserts, fittings, and connectors are also used in the joints</li>
                 </ul>
             </div>
         </div>
