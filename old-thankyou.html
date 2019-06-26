@@ -1,0 +1,207 @@
+﻿<!DOCKTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+    <style>
+
+        body {
+            /*I wanted to use the whole of the screen*/
+            padding: 0px;
+            margin: 0px;
+            /*I chose a nicer font*/
+            font-family: 'Arimo';
+            font-size: 22px;
+        }
+
+        .row1 {
+            /*All rows are 100% width of the screen*/
+            width: 100%;
+            /*My header is 100px high*/
+            height: 100px;
+            /*All rows align with the left hand edge of the screen*/
+            float: left;
+        }
+
+        .header {
+            background-color: #c49c69;
+            width: 80%;
+            height: 100%;
+            float: left;
+            /*The page header text is in the middle of the DIV*/
+            text-align: center;
+            font-size: 50px;
+            vertical-align: middle;
+            line-height: 100px;
+            /*Each DIV has a white inner border to make them stand out */
+            box-sizing: border-box;
+            border: 5px solid white;
+        }
+
+        .logo {
+            width: 20%;
+            height: 100%;
+            float: left;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 5px solid white;
+            /*The logo is centered in the DIV*/
+            text-align: center;
+        }
+
+        .row2 {
+            width: 100%;
+            float: left;
+            /*row2 always starts just bellow row1*/
+            position: absolute;
+            top: 100px;
+            /*row2 fills the space down to the footer*/
+            bottom: 50px;
+        }
+
+        .leftcolumn {
+            /*leftcolumn and rightcolumn fill the width of row2*/
+            width: 20%;
+            height: 100%;
+            float: left;
+        }
+
+        .rightcolumn {
+            width: 80%;
+            height: 100%;
+            float: left;
+        }
+
+        .nav {
+            background-color: #f08080;
+            width: 100%;
+            height: auto;
+            float: left;
+            /*nav will always be the right size for links*/
+            overflow: hidden;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 5px solid white;
+        }
+
+            .nav a {
+                float: left;
+                /*Each link is easy to use on a touch screen*/
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                /*The link is easy to read*/
+                padding: 14px 0px;
+                text-decoration: none;
+                width: 100%;
+            }
+
+                .nav a:hover {
+                    /*The link is easy to see when the mouse hovers over it*/
+                    background-color: #ddd;
+                    color: black;
+                }
+
+        .side {
+            background-color: #1e689e;
+            width: 100%;
+            float: left;
+            /*If I knew what to use this for, I could set the height*/
+            height: auto;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 5px solid white;
+        }
+
+        .main {
+            background-color: #36a7d6;
+            width: 100%;
+            height: 100%;
+            float: left;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 5px solid white;
+            /*There is to much text for a small screen, so this is scrollable*/
+            overflow-y: scroll;
+        }
+
+        .row3 {
+            height: 50px;
+            width: 100%;
+            float: left;
+            text-align: center;
+            position: absolute;
+            bottom: 0px;
+        }
+
+        .footer {
+            background-color: #c49c69;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 5px solid white;
+        }
+
+        /*When the screen is less than 800px wide, row2 changes its layout*/
+        /*This is responsive design. It needs more work*/
+        @media screen and (max-width: 855px) {
+            .leftcolumn, .rightcolumn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--The body is made up of three rows called row1, row2 and row3-->
+
+    <div class="row1">
+        <!--This row contains the Header and Logo-->
+        <div class="header">
+            <!--This DIV is nested inside the row1 DIV-->
+            The Timber Man
+        </div>
+
+        <div class="logo">
+            <!--I have used a simple image for the logo-->
+            <a href="Index.html">
+                <!--Clicking on the logo takes you to the main page-->
+                <img src="img/wood1.jpg" border="0" width="200" height="75" />
+            </a>
+        </div>
+    </div>
+
+    <div class="row2">
+        <!--This was very trickey as there are multiple nested DIVs-->
+        <div class="leftcolumn">
+            <!--This has two DIVs stacked vertically-->
+            <div class="nav">
+                <!--This is where all links are held-->
+                <a href="tips.html">Tips and tricks</a>
+                <a href="Security.html">Security</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+
+            <div class="side">
+                <h2>Information</h2>
+                <p>The email was sent to the company</p> 
+                <p>We will respond to you as soon as possable</p>
+            </div>
+        </div>
+
+        <div class="rightcolumn">
+            <!--This Column contains the Main text of the page-->
+            <div class="main">
+                <!--I have used unorderd list items-->
+                <h2>Thank You for contacting us</h2>
+                <p>If you want to carry on browsing our website, click one of the links.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row3">
+        <!--This row contains the footer-->
+        <div class="footer">
+            &copy; James Malsher
+        </div>
+    </div>
+</body>
+</html>

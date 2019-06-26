@@ -205,54 +205,10 @@
               border: 5px solid white;
           }
 
-          /* Style inputs */
-        input[type=text], select, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical;
-        }
-
-        input[type=submit] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            cursor: pointer;
-        }
-
-            input[type=submit]:hover {
-                background-color: #45a049;
-            }
-
-        /* Style the container/contact section */
-        .container {
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            padding: 10px;
-        }
-
-        /* Create two columns that float next to eachother */
-        .column {
-            float: left;
-            width: 50%;
-            margin-top: 6px;
-            padding: 20px;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
           /*When the screen is less than 1020px wide, row2 changes its layout*/
           /*This is responsive design. It needs more work*/
           @media screen and (max-width: 1020px) {
-              .leftcolumn, .rightcolumn, .column, input[type=submit] {
+              .leftcolumn, .rightcolumn {
                   width: 100%;
               }
 
@@ -302,13 +258,13 @@
                 </a>
 
                 <a href="legal.html">
-                    <div class="menu">
+                    <div class="menu active">
                         Legal
                     </div>
                 </a>
 
                 <a href="Contact.html">
-                    <div class="menu active">
+                    <div class="menu">
                         Contact
                     </div>
                 </a>
@@ -329,41 +285,7 @@
         <div class="rightcolumn">
             <!--This Column contains the Main text of the page-->
             <div class="main">
-                <div class="container">
-                    <div style="text-align:center">
-                        <h2>Contact Us</h2>
-                        <p>To find out more</p>
-                    </div>
-                    <div class="row">
-                        <div class="column">
-                            <a href="Index.html">
-                                <!--Clicking on the logo takes you to the main page-->
-                                <img src="img/computer.jpg" width="100%" />
-                            </a>
-                        </div>
-                        <div class="column">
-                            <form action="thankyou.html" method="post">
-
-                                <label for="email">Email</label>
-                                <input type="text" id="email" name="email" placeholder="Your Email..">
-                                <label for="fname">First Name</label>
-                                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                                <label for="lname">Last Name</label>
-                                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                                <label for="country">Country</label>
-                                <select id="country" name="country">
-                                    <option value="newzealand">New Zealand</option>
-                                    <option value="australia">Australia</option>
-                                    <option value="uk">UK</option>
-                                </select>
-                                <label for="subject">Subject</label>
-                                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-                                <a href="thankyou.html"></a><input type="submit" value="Submit">
-
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                <h2>This is the Legal page</h2>
             </div>
         </div>
     </div>

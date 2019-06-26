@@ -34,18 +34,32 @@
           line-height: 100px;
           /*Each DIV has a white inner border to make them stand out */
           box-sizing: border-box;
-          border: 5px solid white;
+          border-top: 5px solid white;
+          border-right: 0px;
+          border-bottom: 5px solid white;
+          border-left: 5px solid white;
       }
       
       .logo {
           width: 20%;
           height: 100%;
           float: left;
-          padding: 10px;
+          padding: 0px;
           box-sizing: border-box;
-          border: 5px solid white;
+          border-top: 5px solid white;
+          border-right: 5px solid white;
+          border-bottom: 5px solid white;
+          border-left: 0px;
           /*The logo is centered in the DIV*/
           text-align: center;
+          background-color: #c49c69;
+
+      }
+
+      .logoImage {
+          border: 0;
+          height: 90px;
+          background-color: #c49c69;
       }
 
       .row2 {
@@ -194,7 +208,7 @@
           border: 5px solid white;
       }
 
-      /*When the screen is less than 800px wide, row2 changes its layout*/
+      /*When the screen is less than 1020px wide, row2 changes its layout*/
       /*This is responsive design. It needs more work*/
       @media screen and (max-width: 1020px) {
           .leftcolumn, .rightcolumn {
@@ -218,7 +232,7 @@
 
         <div class="logo">  <!--I have used a simple image for the logo-->
             <a href="Index.html">  <!--Clicking on the logo takes you to the main page-->
-                <img src="img/wood1.jpg" border="0" width="200" height="75"/>
+                <img src="img/logo final.png" class="logoImage" />
             </a>
         </div>
     </div>
@@ -271,17 +285,14 @@
                 <h2>Introduction</h2>
                 <ul>
                     <li>
-                        Woodworking, the forming or shaping of wood to create, restore,
-                        or repair useful or decorative objects.
+                        Woodworking is the forming or shaping of wood to create, 
+                        restore or even repair useful or decorative objects.
                     </li>
-
+                   
                     <li>
-                        Carpentry, joinery, and cabinetmaking are specialized woodworking crafts,
-                        providing a range of products from wooden structures and furniture to wooden toys.
-                    </li>
-
-                    <li>
-                        
+                        The art of joinery, carpentry and cabinet-making are all specialized woodworking 
+                        crafts. These techniques have provided a range of useful items for centrys.
+                        They have also been used to create structures, furniture and toys.
                     </li>
                 </ul>
 
